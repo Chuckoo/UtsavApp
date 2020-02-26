@@ -24,18 +24,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           size: 28.0,
         ),
       ),
-      title: Image.asset(AppImages.logo, height: 20.0),
+      title: Text("sid smd",style: TextStyle(color: Colors.red)),
       centerTitle: true,
-      actions: <Widget>[
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            LineIcons.shopping_cart,
-            color: Colors.black,
-            size: 30.0,
-          ),
-        )
-      ],
+      actions: <Widget>[],
     );
   }
 }

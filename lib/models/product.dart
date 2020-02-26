@@ -6,7 +6,7 @@ class Product {
   List<String> photos;
   List<String> colors;
   int price;
-  String brand = "Daniel Wellington";
+  String brand = "Turtle jam is a jam event that happens in bmsce and";
 
   Product({
     this.id,
@@ -20,9 +20,9 @@ class Product {
 List<Product> products = [
   Product(
     id: 1,
-    name: "Classic ST Mawes",
+    name: "Turtlejam",
     price: 179,
-    photos: [AppImages.watch10, AppImages.watch11],
+    photos: [AppImages.logo, AppImages.watch10],
     colors: ["#E5AE87", "#C1C1C1"],
   ),
   Product(
@@ -46,4 +46,20 @@ List<Product> products = [
     photos: [AppImages.watch40, AppImages.watch41],
     colors: ["#E5AE87", "#C1C1C1"],
   ),
+  Product(
+    id: 5,
+    name: "Turtlejam",
+    price: 179,
+    photos: [AppImages.logo, AppImages.watch10],
+    colors: ["#E5AE87", "#C1C1C1"],
+  )
 ];
+
+List<Product> products1 = [
+Product(
+id: 6,
+name: "Kakka",
+price: 179,
+photos: [AppImages.logo, AppImages.watch10],
+colors: ["#E5AE87", "#C1C1C1"],
+)];
