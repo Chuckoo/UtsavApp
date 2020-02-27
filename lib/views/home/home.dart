@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_watch_shop/global_widgets/DrawerMenu.dart';
 import 'package:flutter_watch_shop/global_widgets/custom_appbar.dart';
 import 'package:flutter_watch_shop/global_widgets/timer.dart';
 import 'package:flutter_watch_shop/utils/utils.dart';
@@ -48,6 +49,7 @@ class _HomePageState extends State<HomePage>
 //
     return Scaffold(
       appBar: CustomAppBar(),
+      drawer: DrawerMenu(),
       body: Container(
           decoration: BoxDecoration(
             image: new DecorationImage(
