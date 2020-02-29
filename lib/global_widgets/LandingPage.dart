@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:async';
-
+import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/home.dart';
 
 
@@ -37,24 +37,14 @@ class LandingPageState extends State<LandingPage>{
               filter: new ImageFilter.blur(sigmaX: 1.0,sigmaY: 1.0),
               child: Container(
                 decoration: new BoxDecoration(
-                    color: Colors.white.withOpacity(0.0)
+                    color: Colors.black.withOpacity(0.55)
                 ),
               ),
             ),
           ),
 
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Text("LOGO",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 70,
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w500)
-              ),
-            ],
+          Container(
+            child: Image(image:AssetImage("assets/images/logo.png")),
           )
         ],
       ),

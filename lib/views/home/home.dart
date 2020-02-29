@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     final tabBar = TabBar(
       controller: tabController,
-      indicatorColor: Theme.of(context).primaryColor,
+      indicatorColor: Colors.white,
       indicator: UnderlineTabIndicator(
         borderSide: BorderSide(width: 3.0),
         insets: EdgeInsets.symmetric(horizontal: 40.0),
