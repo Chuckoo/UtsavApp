@@ -49,11 +49,19 @@ class _HomePageState extends State<HomePage>
     return Scaffold(
       appBar: CustomAppBar(),
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.only(top: 50.0),
-        child: Column(
-          children: <Widget>[tabBar, tabBarView],
-        ),
+          decoration: BoxDecoration(
+            image: new DecorationImage(
+              image: AssetImage(AppImages.background),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child:Container(
+            width: MediaQuery.of(context).size.width,
+            padding: EdgeInsets.only(top: 50.0),
+            child: Column(
+              children: <Widget>[tabBar, tabBarView],
+            ),
+          )
       ),
     );
   }
