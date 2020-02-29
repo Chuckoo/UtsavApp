@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'table_sticky_headers.dart';
 
@@ -106,7 +108,7 @@ class ScheduleState extends State<Schedule> {
     ];
     titleRow = [
       "Main Stage",
-      "Indoor\nStadium",
+      "Indoor Stadium",
       //"CR 305"
     ];
 
@@ -157,14 +159,18 @@ class ScheduleState extends State<Schedule> {
   @override
   Widget build(BuildContext context) {
     return Theme(
-        data: ThemeData(backgroundColor: Colors.black,accentColor: Colors.purpleAccent),
+        data: ThemeData(
+            backgroundColor: Colors.black,
+            accentColor: Colors.purpleAccent,
+            fontFamily: "Roboto",
+        ),
         child: StickyHeadersTable(
           contentList: rows,
           columnsLength: titleColumn.length,
           rowsLength: titleRow.length,
           cellDimensions: CellDimensions(contentCellWidth: 70,contentCellHeight: 30,stickyLegendWidth: 70,stickyLegendHeight: 40),
-          columnsTitleBuilder: (i) => Container(child:Text(titleColumn[i],style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500),), color: Colors.lightBlueAccent, alignment: Alignment.center, height: 40,width: 120,),
-          rowsTitleBuilder: (i) => Container(child:Text(titleRow[i],style: TextStyle(fontWeight: FontWeight.w700),), color: Colors.amber, alignment: Alignment.center, height: 50,width: 100,),
+          columnsTitleBuilder: (i) => Container(child:Text(titleColumn[i],style: TextStyle(fontSize: 18,fontWeight: FontWeight.w500,fontFamily: "Roboto",),), color: Colors.lightBlueAccent, alignment: Alignment.center, height: 40,width: 120,),
+          rowsTitleBuilder: (i) => Container(child:Text(titleRow[i],style: TextStyle(fontWeight: FontWeight.w700,fontFamily: "Roboto",),), color: Colors.amber, alignment: Alignment.center, height: 50,width: 100,),
           legendCell: Text('Schedule'),
         ),
     );

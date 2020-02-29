@@ -13,18 +13,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
-      leading: IconButton(
-        onPressed: () {
-          if(!isHome){
-            Navigator.pop(context);
-          }
-        },
-        icon: Icon(
-          isHome ? LineIcons.bars : LineIcons.angle_left,
-          color: Colors.black,
-          size: 28.0,
-        ),
-      ),
       title: Image.asset(AppImages.logo, height: 30.0),
       centerTitle: true,
       actions: <Widget>[],

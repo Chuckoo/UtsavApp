@@ -6,7 +6,7 @@ ThemeData buildThemeData() {
   final baseTheme = ThemeData(fontFamily: AppFonts.primaryFont);
 
   return baseTheme.copyWith(
-    primaryColor: AppColors.primaryColor,
-    scaffoldBackgroundColor: AppColors.scaffoldColor,
+    primaryColor: Colors.white,
+    scaffoldBackgroundColor: Colors.white,
   );
 }
