@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:line_icons/line_icons.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -23,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           size: 28.0,
         ),
       ),
-      title: Text("sid smd",style: TextStyle(color: Colors.red)),
+      title: Image.asset(AppImages.logo, height: 30.0),
       centerTitle: true,
       actions: <Widget>[],
     );

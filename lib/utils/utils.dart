@@ -19,6 +19,7 @@ class AppFunctions {
 
 class AppImages {
   static const logo = "assets/images/logo.png";
+  static const background = "assets/images/bg.png";
   static const watch10 = "assets/images/watch10.png";
   static const watch11 = "assets/images/watch11.png";
   static const watch20 = "assets/images/watch20.png";
