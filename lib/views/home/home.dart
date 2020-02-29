@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_watch_shop/global_widgets/DrawerMenu.dart';
 import 'package:flutter_watch_shop/global_widgets/custom_appbar.dart';
+import 'package:flutter_watch_shop/global_widgets/schedule.dart';
 import 'package:flutter_watch_shop/global_widgets/timer.dart';
 import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/widgets/product_list.dart';
+import 'package:flutter/scheduler.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage>
         margin: EdgeInsets.only(top: 30.0),
         child: TabBarView(
           controller: tabController,
-          children: <Widget>[ProductList1(), MyApp(), ProductList()],
+          children: <Widget>[ProductList(), MyApp(), Schedule()],
         ),
       ),
     );
@@ -64,7 +66,8 @@ class _HomePageState extends State<HomePage>
             child: Column(
               children: <Widget>[tabBar, tabBarView],
             ),
-          )),
+          ),
+      ),
     );
   }
 }
