@@ -42,30 +42,29 @@ class _HomePageState extends State<HomePage>
         margin: EdgeInsets.only(top: 30.0),
         child: TabBarView(
           controller: tabController,
-          children: <Widget>[ProductList1(),MyApp(), ProductList()],
+          children: <Widget>[ProductList1(), MyApp(), ProductList()],
         ),
       ),
     );
 
-    return Scaffold(
-      appBar: CustomAppBar(),
-      drawer: DrawerMenu(),
-      body: Container(
-          decoration: BoxDecoration(
-            image: new DecorationImage(
-              image: AssetImage(AppImages.background),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child:Container(
+    return Container(
+      decoration: BoxDecoration(
+        image: new DecorationImage(
+          image: AssetImage(AppImages.background),
+          fit: BoxFit.cover,
+        ),
+      ),
+      child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: CustomAppBar(),
+          drawer: DrawerMenu(),
+          body: Container(
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.only(top: 50.0),
             child: Column(
               children: <Widget>[tabBar, tabBarView],
             ),
-          )
-      ),
+          )),
     );
   }
 }
-
