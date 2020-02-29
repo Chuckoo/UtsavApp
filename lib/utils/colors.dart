@@ -6,6 +6,6 @@ class AppColors {
   static const primaryDarkColor = const Color(0xFFE2E1E1);
   
   static const statusBarColor = Colors.white;
-  static const appBarColor = primaryDarkColor;
-  static const scaffoldColor = primaryDarkColor;
+  static const appBarColor = Colors.transparent;
+  static const scaffoldColor = primaryLightColor;
 }
