@@ -14,7 +14,7 @@ class LandingPageState extends State<LandingPage>{
   @override
   void initState(){
     super.initState();
-    Timer(Duration(seconds:3),(){
+    Timer(Duration(seconds:4),(){
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) => HomePage()));
     });
@@ -29,15 +29,15 @@ class LandingPageState extends State<LandingPage>{
           Container(
             decoration: BoxDecoration(
               image: new DecorationImage(
-                image: AssetImage("SVG/2x/bg.png"),
+                image: AssetImage(AppImages.background),
                 fit: BoxFit.cover,
               ),
             ),
             child: BackdropFilter(
-              filter: new ImageFilter.blur(sigmaX: 1.0,sigmaY: 1.0),
+              filter: new ImageFilter.blur(sigmaX: 2.0,sigmaY: 3.0),
               child: Container(
                 decoration: new BoxDecoration(
-                    color: Colors.black.withOpacity(0.55)
+                    color: Colors.black.withOpacity(0.2)
                 ),
               ),
             ),

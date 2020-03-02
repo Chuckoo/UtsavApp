@@ -5,6 +5,8 @@ import 'package:flutter_watch_shop/global_widgets/schedule.dart';
 import 'package:flutter_watch_shop/global_widgets/timer.dart';
 import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/widgets/product_list.dart';
+import 'dart:ui';
+import 'dart:async';
 
 class HomePage extends StatefulWidget {
   @override
@@ -43,30 +45,43 @@ class _HomePageState extends State<HomePage>
         margin: EdgeInsets.only(top: 5.0),
         child: TabBarView(
           controller: tabController,
-          children: <Widget>[ProductList(), MyApp(), Schedule()],
+          children: <Widget>[ProductList(), CdTimer(), Schedule()],
         ),
       ),
     );
 
-    return Container(
-      decoration: BoxDecoration(
-        image: new DecorationImage(
-          image: AssetImage(AppImages.background),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: CustomAppBar(),
-          drawer: DrawerMenu(),
-          body: Container(
-            width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.only(top: 5.0),
-            child: Column(
-              children: <Widget>[tabBar, tabBarView],
+    return Stack(
+        fit: StackFit.expand,
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              image: new DecorationImage(
+                image: AssetImage("SVG/2x/bg.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: BackdropFilter(
+              filter: new ImageFilter.blur(sigmaX: 2.0,sigmaY: 3.0),
+              child: Container(
+                decoration: new BoxDecoration(
+                    color: Colors.black.withOpacity(0.2)
+                ),
+              ),
             ),
           ),
-      ),
-    );
+          Scaffold(
+            backgroundColor: Colors.transparent,
+            appBar: CustomAppBar(),
+            drawer: DrawerMenu(),
+            body: Container(
+              width: MediaQuery.of(context).size.width,
+              padding: EdgeInsets.only(top: 5.0),
+              child: Column(
+                children: <Widget>[tabBar, tabBarView],
+              ),
+            ),
+          ),
+        ],
+      );
   }
 }

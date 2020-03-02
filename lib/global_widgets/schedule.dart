@@ -33,26 +33,26 @@ class ScheduleState extends State<Schedule> {
   List<List<Container>> rows = [];
   List<String> day;
   int D;
-  int cellWidth = 70;
+  int cellWidth = 80;
 
   Container eventCellGen(String name, double start, double end, Color fillColor,
       Color rippleColor) {
     return Container(
-        margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
-        color: fillColor,
-        child: new Material(
-            color: Colors.transparent,
-            child: InkWell(
-                onTap: () {},
-                splashColor: rippleColor,
-                child: Container(
-                  height: 25,
-                  width: (end - start) * cellWidth,
-                  alignment: Alignment.center,
-                  child: Text(name),
-                ),
-            ),
+      margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
+      color: fillColor,
+      child: new Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {},
+          splashColor: rippleColor,
+          child: Container(
+            height: 25,
+            width: (end - start) * cellWidth,
+            alignment: Alignment.center,
+            child: Text(name),
+          ),
         ),
+      ),
     );
   }
 
@@ -64,7 +64,7 @@ class ScheduleState extends State<Schedule> {
         row.add(Container(
           margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
           height: 25,
-          width: (data[i].start-8.0)*cellWidth,
+          width: (data[i].start - 8.0) * cellWidth,
           child: null,
         ));
       }
@@ -79,7 +79,7 @@ class ScheduleState extends State<Schedule> {
         row.add(Container(
           margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
           height: 25,
-          width: (data[i+1].start - data[i].end)*cellWidth,
+          width: (data[i + 1].start - data[i].end) * cellWidth,
           child: null,
         ));
       }
@@ -89,17 +89,31 @@ class ScheduleState extends State<Schedule> {
 
   void initState() {
     super.initState();
-    day = ["March 13", "March 14", "March 15",];
+    day = [
+      "March 13",
+      "March 14",
+      "March 15",
+    ];
     D = 0;
     titleColumn = [
-      "8AM to 9AM", "9AM to 9AM", "10AM to 9AM", "11AM to 9AM", "12PM to 1AM",
-      "1PM to 2AM", "2PM to 3PM", "3PM to 4PM", "4PM to 5PM", "5PM to 6PM",
-      "6PM to 7PM", "7PM to 8PM", "8PM to 9PM"
+      "8AM to 9AM",
+      "9AM to 10AM",
+      "10AM to 11AM",
+      "11AM to 12AM",
+      "12PM to 1PM",
+      "1PM to 2AM",
+      "2PM to 3PM",
+      "3PM to 4PM",
+      "4PM to 5PM",
+      "5PM to 6PM",
+      "6PM to 7PM",
+      "7PM to 8PM",
+      "8PM to 9PM"
     ];
     day1();
   }
 
-  void day1 (){
+  void day1() {
     setState(() {
       titleRow = [
         "Main Stage",
@@ -118,7 +132,7 @@ class ScheduleState extends State<Schedule> {
     });
   }
 
-  void day2 (){
+  void day2() {
     setState(() {
       titleRow = [
         "Main Stage",
@@ -127,7 +141,7 @@ class ScheduleState extends State<Schedule> {
       ];
       rows = [];
       rows.add(scheduleRowGen([
-        EventInfo("asd", 8.0, 13.0, Colors.red, Colors.purple,),
+        EventInfo("asd", 8.0, 13.5, Colors.red, Colors.purple,),
         EventInfo("test", 15.0, 16.0, Colors.amber, Colors.blue,),
       ]));
       rows.add(scheduleRowGen([
@@ -137,9 +151,9 @@ class ScheduleState extends State<Schedule> {
     });
   }
 
-  void update(){
-    switch (D){
-      case 0 :
+  void update() {
+    switch (D) {
+      case 0:
         day1();
         break;
       case 1:
@@ -174,7 +188,7 @@ class ScheduleState extends State<Schedule> {
               child: Text(
                 titleColumn[i],
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                   fontWeight: FontWeight.w500,
                   fontFamily: "Roboto",
                 ),
@@ -205,11 +219,9 @@ class ScheduleState extends State<Schedule> {
             right: 0,
             child: RaisedButton(
               color: Colors.purple,
-              onPressed: (){
+              onPressed: () {
                 setState(() {
-                  if(D<2){
-                    D++;
-                  }
+                  if (D < 2) {D++;}
                   update();
                 });
               },
@@ -224,11 +236,9 @@ class ScheduleState extends State<Schedule> {
             left: 0,
             child: RaisedButton(
               color: Colors.purple,
-              onPressed: (){
+              onPressed: () {
                 setState(() {
-                  if(D>0){
-                    D--;
-                  }
+                  if (D > 0) {D--;}
                   update();
                 });
               },
