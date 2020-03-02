@@ -11,28 +11,24 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final spacer = SizedBox(height: 5.0);
 
-    final image = Hero(tag: product.id, child: Image.asset(product.photos[0]));
+   final image = Hero(tag: product.id, child: Image.asset(product.photos[0]));
 
     final name = Text(
       product.name.toUpperCase(),
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: 12.0,
+        fontSize: 15.0,
         fontWeight: FontWeight.bold,
       ),
     );
 
-    final brand = Text(
-      product.brand.toUpperCase(),
+   /*
+    final description = Text(
+      product.description.toUpperCase(),
       style: TextStyle(fontSize: 11.0, color: Colors.grey),
     );
+*/
 
-    final price = Text(
-      "\$${product.price.toString()}",
-      style: TextStyle(
-        fontWeight: FontWeight.bold,
-      ),
-    );
 
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.0),
@@ -52,12 +48,11 @@ class ProductCard extends StatelessWidget {
             children: <Widget>[
               image,
               spacer,
+              spacer,
               name,
               spacer,
               spacer,
-              brand,
-              spacer,
-              price
+              //description,
             ],
           ),
         ),

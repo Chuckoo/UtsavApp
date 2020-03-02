@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_watch_shop/global_widgets/custom_appbar.dart';
 import 'package:flutter_watch_shop/models/product.dart';
-import 'package:flutter_watch_shop/services/alert.service.dart';
 import 'package:flutter_watch_shop/utils/colors.dart';
-import 'package:flutter_watch_shop/views/product_details/widgets/color_chooser.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   final Product product;
@@ -28,50 +26,70 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       allowFontScaling: true,
     )..init(context);
 
-    final multiplier = screenHeight / screenWidth;
+    //final multiplier = screenHeight / screenWidth;
 
     final spacer = SizedBox(height: 10.0);
 
+    final divider = Divider(color: Colors.black,);
+
+    /*
     final image = Hero(
       tag: widget.product.id,
       child: Image.asset(
         widget.product.photos[_selectedColorIndex],
         height: ScreenUtil().setHeight(400) * multiplier,
       ),
-    );
+    );*/
 
     final name = Text(
       widget.product.name.toUpperCase(),
       textAlign: TextAlign.center,
       style: TextStyle(
-        fontSize: 20.0,
+        fontSize: 35.0,
         fontWeight: FontWeight.w500,
       ),
     );
 
-    final brand = Text(
-      widget.product.brand.toUpperCase(),
-      style: TextStyle(fontSize: 14.0, color: Colors.grey),
+    final description = Text(
+      widget.product.description,
+      style: TextStyle(fontSize: 18.0, color: Colors.black),
     );
 
-    final chooseColor = Text(
-      "Choose a Color",
-      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w500),
+    final rules = Text("RULES:\n" +
+      widget.product.rules,
+      style: TextStyle(fontSize: 14.0, color: Colors.black54),
     );
 
-    final colorChooser = ColorChooser(
-      colors: widget.product.colors,
-      selectedColorIndex: _selectedColorIndex,
-      onColorSelected: (int selected) {
-        setState(() {
-          _selectedColorIndex = selected;
-        });
-      },
+    final info = RichText(
+      textAlign: TextAlign.left,
+      text: new TextSpan(
+        style: new TextStyle(
+          fontSize: 14.0,
+          color: Colors.black
+        ),
+        children: <TextSpan>[
+          new TextSpan(text: 'Coordinator:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.contact + "\n"),
+          new TextSpan(text: 'Coontact no.:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.contactno + "\n"),
+          new TextSpan(text: 'Reg Fee:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.fee + "₹\n"),
+          new TextSpan(text: 'First Prize:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.oneprize + "₹\n"),
+          new TextSpan(text: 'Second Prize:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.twoprize + "₹\n"),
+          new TextSpan(text: 'Date and Time:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.datestring + "\n"),
+          new TextSpan(text: 'Venue:\t', style: new TextStyle(fontWeight: FontWeight.bold)),
+          new TextSpan(text: widget.product.venue + "\n"),
+        ],
+      ),
     );
 
-    final top = Expanded(
+
+    final top = SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.only(top: 50.0),
+        padding: EdgeInsets.only(top: 15.0,left: 15.0,right: 15.0),
         width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.scaffoldColor,
@@ -84,15 +102,20 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           children: <Widget>[
             name,
             spacer,
-            brand,
-            image,
-            chooseColor,
-            colorChooser
+            divider,
+            description,
+            spacer,
+            divider,
+            rules,
+            spacer,
+            divider,
+            info,
+            //image,
           ],
         ),
       ),
     );
-
+/*
     final bottom = Container(
       height: MediaQuery.of(context).size.height * 0.12, // 95.0
       color: Colors.white,
@@ -125,13 +148,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
         ),
       ),
     );
-
+*/
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.transparent,
       appBar: CustomAppBar(isHome: false),
-      body: Column(
-        children: <Widget>[top, bottom],
-      ),
+      body: top,
     );
   }
 }
