@@ -91,6 +91,7 @@ class _ProductListState extends State<ProductList> {
     );
 
     return Container(
+      margin: EdgeInsets.symmetric(horizontal: 10.0),
       child: Column(
         children: <Widget>[itemCountRow, list],
       ),

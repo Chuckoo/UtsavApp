@@ -5,7 +5,6 @@ import 'package:flutter_watch_shop/global_widgets/schedule.dart';
 import 'package:flutter_watch_shop/global_widgets/timer.dart';
 import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/widgets/product_list.dart';
-import 'package:flutter/scheduler.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -40,7 +39,7 @@ class _HomePageState extends State<HomePage>
 //
     final tabBarView = Expanded(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
+        padding: EdgeInsets.symmetric(horizontal: 0.0),
         margin: EdgeInsets.only(top: 5.0),
         child: TabBarView(
           controller: tabController,
