@@ -1,5 +1,8 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import './pages.dart';
 
 class DrawerMenu extends StatefulWidget{
   @override
@@ -20,27 +23,31 @@ class DrawerMenuState extends State<DrawerMenu>{
       child:Drawer(
         child: ListView(
           children: <Widget>[
+            SizedBox(height: 100,),
+            new ListTile(
+            title: new Text("Utsav 2020",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
+            trailing: new Icon(Icons.blur_on),
+            
 
-            ListTile(
-              title: Text("MENU 1",style: TextStyle(fontSize: 20,color: Colors.white),),
-              trailing: Icon(Icons.bookmark,color: Colors.white),
             ),
-            Divider(
-              color: Colors.white,
-              thickness: 0.7,
+            SizedBox(height: 100,),
+            new ListTile(
+            title: new Text("About Us",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
+            trailing: new Icon(Icons.blur_on),
+            onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Page("First Page")));
+              }
             ),
-            ListTile(
-              title: Text("MENU 2",style: TextStyle(fontSize: 20,color: Colors.white),),
-              trailing: Icon(Icons.bookmark,color: Colors.white,),
-              onTap: (){},
-            ),
-            Divider(
-              color: Colors.white,
-              thickness: 0.7,
-            ),
-            ListTile(
-              title: Text("MENU 3",style: TextStyle(fontSize: 20,color: Colors.white),),
-              trailing: Icon(Icons.bookmark,color: Colors.white,),
+            SizedBox(height: 25,),
+            new ListTile(
+            
+            title: new Text("About Devs",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
+            trailing: new Icon(Icons.blur_on),
+            onTap: () {
+                Navigator.of(context).pop();
+                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Page("First Page")));
+              }
             )
           ],
         ),
@@ -48,4 +55,34 @@ class DrawerMenuState extends State<DrawerMenu>{
     );
   }
 
+}
+
+
+
+Widget menu(context) {
+  return Container(
+   
+    child: Padding(
+      padding: const EdgeInsets.only(left: 16.0),
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(height: 50),
+            Text("Utsav 2020",
+                style: TextStyle(color: Colors.white, fontSize: 30)),
+            SizedBox(height: 30),
+            Text("About Us",
+                style: TextStyle(color: Colors.white, fontSize: 22)),
+            SizedBox(height: 20),
+            Text("About Devs",
+                style: TextStyle(color: Colors.white, fontSize: 22)),
+          ],
+        ),
+      ),
+    ),
+  );
 }
