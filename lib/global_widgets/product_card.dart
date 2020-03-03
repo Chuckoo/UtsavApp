@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_watch_shop/models/product.dart';
 import 'package:flutter_watch_shop/router.dart' as router;
-import 'package:flutter_watch_shop/utils/colors.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -19,6 +18,7 @@ class ProductCard extends StatelessWidget {
       style: TextStyle(
         fontSize: 15.0,
         fontWeight: FontWeight.bold,
+        color: Colors.white
       ),
     );
 
@@ -33,7 +33,7 @@ class ProductCard extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 3.0),
       child: MaterialButton(
-        color: AppColors.primaryLightColor,
+        color: Colors.deepPurple,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
@@ -46,7 +46,7 @@ class ProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              image,
+              //image,
               spacer,
               spacer,
               name,
