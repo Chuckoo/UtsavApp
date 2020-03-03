@@ -36,7 +36,7 @@ class DrawerMenuState extends State<DrawerMenu>{
             trailing: new Icon(Icons.blur_on),
             onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Page("First Page")));
+                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new AboutPage("First Page")));
               }
             ),
             SizedBox(height: 25,),
@@ -46,7 +46,7 @@ class DrawerMenuState extends State<DrawerMenu>{
             trailing: new Icon(Icons.blur_on),
             onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Page("First Page")));
+                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new DevPage("First Page")));
               }
             )
           ],
