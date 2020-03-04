@@ -36,15 +36,17 @@ class AboutPage extends StatelessWidget {
           body: Container(
             width: MediaQuery.of(context).size.width,
             padding: EdgeInsets.only(top: 5.0),
-            child: Column(
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/theme.PNG',
-                  height: 400,
-                  width: 400,
-                  fit: BoxFit.fitWidth,
-                )
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Image.asset(
+                    'assets/images/theme.PNG',
+                    height: 400,
+                    width: 400,
+                    fit: BoxFit.fitWidth,
+                  )
+                ],
+              ),
             ),
           ),
         ),
