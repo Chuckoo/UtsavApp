@@ -22,6 +22,7 @@ dependencies:
   line_icons: ^0.2.0
   flushbar: ^1.9.0
   flutter_screenutil: ^0.5.3
+  url_launcher: ^5.4.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -91,6 +92,11 @@ flutter:
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
         - asset: assets/fonts/Roboto-Bold.ttf
+    - family: Thunderstrike
+      fonts:
+        - asset: assets/fonts/thunderstrike3d.ttf
+        - asset: assets/fonts/thunderstrikecond.ttf
+        - asset: assets/fonts/thunderstrikeitalic.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
