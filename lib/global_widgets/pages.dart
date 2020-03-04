@@ -207,12 +207,8 @@ class CorePage extends StatelessWidget {
                   Text('Pratima Ma\'am',
                       style:
                           new TextStyle(fontSize: 30, color: Colors.white60)),
-                          Image.asset(
-                    'assets/images/Red.jpg',
-                    height: 200,
-                    width: 200,
-                    fit: BoxFit.fitWidth,
-                  ),
+                          Image.asset('assets/images/Red.jpg',
+                      height: 200, width: 200, fit: BoxFit.fitWidth),
                   Text('Reddy Sir',
                       style:
                           new TextStyle(fontSize: 30, color: Colors.white60)),
