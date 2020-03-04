@@ -59,8 +59,8 @@ class ScheduleState extends State<Schedule> {
 
   List<Container> scheduleRowGen(List<EventInfo> data){
     List<Container> row = [];
-
-    for(int i=0;i<data.length;i++){
+    int i;
+    for(i=0;i<data.length;i++){
       if(i==0 && data[i].start!=8){
         row.add(Container(
           margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
@@ -85,6 +85,14 @@ class ScheduleState extends State<Schedule> {
           child: null,
         ));
       }
+    }
+    if(data[data.length-1].end != 21){
+      row.add(Container(
+        margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
+        height: 25,
+        width: (21-data[data.length-1].end) * 70,
+        child: null,
+      ));
     }
     return row;
   }
@@ -141,7 +149,7 @@ class ScheduleState extends State<Schedule> {
       "Auditorium 2",
       "Auditorium 1",
       "FDC Hall",
-      "Space between PG block and PJAC ",
+      "Besides PJAC",
       "ISE lab",
       "CR 501,505 ",
       "CR 405",
@@ -170,27 +178,27 @@ class ScheduleState extends State<Schedule> {
       EventInfo("Battle of Bands",11.0, 14.5, Colors.indigoAccent, ),
       EventInfo("ESH", 14.5, 16.5, Colors.purpleAccent, ),
       EventInfo("Folk Dance", 16.5, 17.0,  Colors.indigoAccent),
-      EventInfo("Fashion show", 17.0, 19.5, Colors.indigoAccent, ),
-      EventInfo("EDM Night", 19.5, 21.0, Colors.purpleAccent, ),
+      EventInfo("Fashion show", 17.0, 19.5, Colors.purpleAccent, ),
+      EventInfo("EDM Night", 19.5, 21.0, Colors.indigoAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Solo Dance", 10.0, 14.0, Colors.indigoAccent, ),
-      EventInfo("Mad ads", 14.0, 17.0, Colors.purpleAccent, ),
+      EventInfo("Solo Dance", 10.0, 14.0, Colors.purpleAccent, ),
+      EventInfo("Mad ads", 14.0, 17.0, Colors.indigoAccent, ),
     ]));
     rows.add(scheduleRowGen([
       EventInfo("VISTAAR - Indian Group Music", 12.0, 15.0, Colors.indigoAccent, ),
       EventInfo("Anime Quiz", 15.0, 17.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Photo Stage", 9.0, 14.0, Colors.indigoAccent, ),
-      EventInfo("Vocal Solo", 14.0, 17.0, Colors.purpleAccent, ),
+      EventInfo("Photo Stage", 9.0, 14.0, Colors.purpleAccent, ),
+      EventInfo("Vocal Solo", 14.0, 17.0, Colors.indigoAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Infinite aMAZE", 14.0, 17.0, Colors.indigoAccent, ),
+      EventInfo("Infinite aMAZE", 14.0, 17.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Mock Placments", 9.0, 13.5, Colors.indigoAccent, ),
-      EventInfo("Online Crypt Hunt", 13.5, 15.5, Colors.purpleAccent, ),
+      EventInfo("Mock Placments", 9.0, 13.5, Colors.purpleAccent, ),
+      EventInfo("Online Crypt Hunt", 13.5, 15.5, Colors.indigoAccent, ),
     ]));
     rows.add(scheduleRowGen([
       EventInfo("Layakari, GAMAKA Instrumental", 9.0, 15.0, Colors.indigoAccent, ),
@@ -233,8 +241,8 @@ class ScheduleState extends State<Schedule> {
       EventInfo("Manga Drawing Competition", 14.0, 17.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Workshop on decaupage's art", 10.0, 13.5, Colors.indigoAccent, ),
-      EventInfo("Paint the Puzzle", 14.0, 17.0, Colors.purpleAccent, ),
+      EventInfo("Workshop on decaupage's art", 10.0, 13.5, Colors.purpleAccent, ),
+      EventInfo("Paint the Puzzle", 14.0, 17.0, Colors.indigoAccent, ),
     ]));
     rows.add([Container(color:Colors.white30,margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5), height: 25, width: 13.0*70.0, child: null,)]);
     rows.add(scheduleRowGen([
@@ -242,11 +250,11 @@ class ScheduleState extends State<Schedule> {
       EventInfo("Whiplash", 16.5, 21.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Turtle Jam", 9.0, 17.0, Colors.indigoAccent, ),
+      EventInfo("Turtle Jam", 9.0, 17.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Western Group Acoustics", 10.0, 14.0, Colors.purpleAccent, ),
-      EventInfo("Invincible", 14.0, 16.0, Colors.indigoAccent, ),
+      EventInfo("Western Group Acoustics", 10.0, 14.0, Colors.indigoAccent, ),
+      EventInfo("Invincible", 14.0, 16.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
       EventInfo("General Quiz", 10.0, 13.5, Colors.purpleAccent, ),
@@ -262,7 +270,7 @@ class ScheduleState extends State<Schedule> {
       EventInfo("Code-A-Thon", 9.0, 13.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("END: Escape into neuvo decennium", 13.0, 16.0, Colors.indigoAccent, ),
+      EventInfo("Escape into neuvo decennium", 13.0, 16.0, Colors.indigoAccent, ),
     ]));
     rows.add(scheduleRowGen([
       EventInfo("Call Of Duty Mobile", 9.0, 13.0, Colors.purpleAccent, ),
@@ -274,7 +282,7 @@ class ScheduleState extends State<Schedule> {
       EventInfo("VR Game Experience", 9.0, 13.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
-      EventInfo("Mission Improv-able", 12.0, 13.0, Colors.indigoAccent ),
+      EventInfo("Mission Improv-able", 11.0, 13.0, Colors.indigoAccent ),
       EventInfo("Math Mania 2.0", 14.0, 17.0, Colors.purpleAccent, ),
     ]));
     rows.add(scheduleRowGen([
@@ -306,8 +314,8 @@ class ScheduleState extends State<Schedule> {
         columnsLength: titleColumn.length,
         rowsLength: titleRow.length,
         cellDimensions: CellDimensions(contentCellWidth: 70,contentCellHeight: 30,stickyLegendWidth: 90,stickyLegendHeight: 40),
-        columnsTitleBuilder: (i) => Container(child:Text(titleColumn[i],style: TextStyle(fontWeight: FontWeight.w500,fontFamily: "Roboto",),), color: Colors.lightBlueAccent, alignment: Alignment.center, height: 50,width: 100,),
-        rowsTitleBuilder: (i) => Container(child:Text(titleRow[i],style: TextStyle(fontWeight: FontWeight.w600,fontFamily: "Roboto",fontSize: 24),), color: setColorRT(titleRow[i]), alignment: Alignment.center, height: 50,width: 175,),
+        columnsTitleBuilder: (i) => Container(child:Text(titleColumn[i],style: TextStyle(fontWeight: FontWeight.w600,fontFamily: "Roboto",fontSize: 15),), color: Colors.lightBlueAccent, alignment: Alignment.center, height: 50,width: 110,margin: EdgeInsets.fromLTRB(2, 0, 2, 0),),
+        rowsTitleBuilder: (i) => Container(child:Text(titleRow[i],style: TextStyle(fontWeight: FontWeight.w600,fontFamily: "Roboto",fontSize: 22),), color: setColorRT(titleRow[i]), alignment: Alignment.center, height: 50,width: 175,),
         legendCell: Text("\t\t\t\t\t\tTimings\nVenue", style: TextStyle(fontFamily: "Roboto", color: Colors.white)),
       ),
     );
