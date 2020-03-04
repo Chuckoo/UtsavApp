@@ -47,30 +47,15 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/logo.png
-   - assets/images/bg.png
-   - assets/images/watch10.png
-   - assets/images/watch11.png
+   - assets/images/bg.jpg
    - assets/images/watch20.png
-   - assets/images/watch21.png
-   - assets/images/watch30.png
-   - assets/images/watch31.png
-   - assets/images/watch40.png
-   - assets/images/watch41.png
    - SVG/2x/bg.png
    - assets/images/vivek.jpg
    - assets/images/rahul.jpg
-   - assets/images/about.PNG
-   - assets/images/flagship.PNG
-   - assets/images/festival.PNG
-   - assets/images/Sponsor.PNG
-   - assets/images/sponsor2.PNG
-   - assets/images/sponsor3.PNG
-   - assets/images/sponsor4.PNG
-   - assets/images/theme.PNG
    - assets/images/Abhishek.jpg
    - assets/images/HSGr.jpg
    - assets/images/Pratimas.jpg
-   - assets/images/Red.JPG
+   - assets/images/Red.jpg
    - assets/images/Mithun.jpg
    - assets/images/Sameer.jpeg
    - assets/images/Sanjana.jpg
