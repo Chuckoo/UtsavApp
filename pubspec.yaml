@@ -67,6 +67,15 @@ flutter:
    - assets/images/sponsor3.PNG
    - assets/images/sponsor4.PNG
    - assets/images/theme.PNG
+   - assets/images/Abhishek.jpg
+   - assets/images/HSGr.jpg
+   - assets/images/Pratimas.jpg
+   - assets/images/Reddy.JPG
+   - assets/images/Mithun.jpg
+   - assets/images/Sameer.jpeg
+   - assets/images/Sanjana.jpg
+   - assets/images/Smriti.jpg
+   - assets/images/Vikram.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

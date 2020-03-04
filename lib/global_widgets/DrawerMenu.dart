@@ -1,67 +1,99 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import './pages.dart';
 
-class DrawerMenu extends StatefulWidget{
+class DrawerMenu extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return DrawerMenuState();
   }
 }
 
-class DrawerMenuState extends State<DrawerMenu>{
-
+class DrawerMenuState extends State<DrawerMenu> {
   @override
   Widget build(BuildContext context) {
     return Theme(
       data: Theme.of(context).copyWith(
-        canvasColor: Colors.black12,
+        canvasColor: Colors.black54,
         splashColor: Colors.purpleAccent,
       ),
-      child:Drawer(
+      child: Drawer(
         child: ListView(
           children: <Widget>[
-            SizedBox(height: 100,),
-            new ListTile(
-            title: new Text("Utsav 2020",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
-            trailing: new Icon(Icons.blur_on),
-            
-
+            SizedBox(
+              height: 100,
             ),
-            SizedBox(height: 100,),
-            new ListTile(
-            title: new Text("About Us",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
-            trailing: new Icon(Icons.blur_on),
-            onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new AboutPage("First Page")));
-              }
-            ),
-            SizedBox(height: 25,),
-            new ListTile(
+            DrawerHeader(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/images/logo.png"),
+                fit: BoxFit.cover
+              )
+            ), child: null,
+              
+              ),
             
-            title: new Text("About Devs",style: new TextStyle(fontSize: 35,fontFamily:'Poppins', color: Colors.white60),),
-            trailing: new Icon(Icons.blur_on),
-            onTap: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new DevPage("First Page")));
-              }
-            )
+            SizedBox(
+              height: 100,
+            ),
+            new ListTile(
+                title: new Text(
+                  "About Us",
+                  style: new TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'Poppins',
+                      color: Colors.white60),
+                ),
+                trailing: new Icon(Icons.blur_on),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new AboutPage("First Page")));
+                }),
+            SizedBox(
+              height: 25,
+            ),
+            new ListTile(
+                title: new Text(
+                  "About Devs",
+                  style: new TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'Poppins',
+                      color: Colors.white60),
+                ),
+                trailing: new Icon(Icons.blur_on),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new DevPage("First Page")));
+                }),
+                SizedBox(height: 25,),
+                new ListTile(
+                title: new Text(
+                  "About Core",
+                  style: new TextStyle(
+                      fontSize: 35,
+                      fontFamily: 'Poppins',
+                      color: Colors.white60),
+                ),
+                trailing: new Icon(Icons.blur_on),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          new CorePage("First Page")));
+                })
           ],
         ),
       ),
     );
   }
-
 }
-
-
 
 Widget menu(context) {
   return Container(
-   
     child: Padding(
       padding: const EdgeInsets.only(left: 16.0),
       child: Align(
