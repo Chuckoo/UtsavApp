@@ -31,7 +31,7 @@ class _ProductListState extends State<ProductList> {
           crossAxisCount: 2,
           crossAxisSpacing: 15.0,
           mainAxisSpacing: 15.0,
-          childAspectRatio: 1.5,
+          childAspectRatio: 1.3,
         ),
         itemCount: products.length,
       ),
