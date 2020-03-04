@@ -15,8 +15,15 @@ class CdTimerState extends State<CdTimer> {
 
   void update() {
     Duration cd = utsav.difference(DateTime.now());
-    timeLeft =
-        "\n${cd.inDays} D ${cd.inHours % 24} H\n${cd.inMinutes % 60} m: ${cd.inSeconds % 60} s";
+    if(!DateTime.now().isAfter(utsav)){
+      timeLeft = "\n${cd.inDays} D ${cd.inHours % 24} H\n${cd.inMinutes % 60} m: ${cd.inSeconds % 60} s";}
+    else
+      {
+        timeLeft = "Utsav is Here !";
+        text1 = Text("");
+        text2 = Text("");
+        text3 = Text("");
+      }
   }
 
   @override
@@ -35,7 +42,7 @@ class CdTimerState extends State<CdTimer> {
 
   final spacer = SizedBox(height: 5.0);
 
-  final text1 = Text(
+  var text1 = Text(
     "COUNTDOWN",
     style: TextStyle(
         fontSize: 35,
@@ -44,8 +51,17 @@ class CdTimerState extends State<CdTimer> {
         fontFamily: "Thunderstrike"),
   );
 
-  final text2 = Text(
+  var text2 = Text(
     "TO",
+    style: TextStyle(
+        fontSize: 35,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontFamily: "Thunderstrike"),
+  );
+
+  var text3 = Text(
+    "UTSAV",
     style: TextStyle(
         fontSize: 35,
         color: Colors.white,
@@ -62,14 +78,7 @@ class CdTimerState extends State<CdTimer> {
           children: <Widget>[
             text1,
             text2,
-            Text(
-              "UTSAV",
-              style: TextStyle(
-                  fontSize: 35,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Thunderstrike"),
-            ),
+            text3,
             spacer,
             Text(
               timeLeft,
