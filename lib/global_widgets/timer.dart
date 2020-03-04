@@ -75,9 +75,8 @@ class CdTimerState extends State<CdTimer> {
             spacer,
             spacer,
             InkWell(
-              onTap: ()=>launch("http://www.explara.com/e/bmsce-utsav-2020"),
               child: MaterialButton(
-                onPressed: () => print("working"),
+                onPressed: ()=>launch("http://www.explara.com/e/bmsce-utsav-2020"),
                 padding: EdgeInsets.all(20.0),
                 color: Colors.deepPurpleAccent,
                   shape: RoundedRectangleBorder(
