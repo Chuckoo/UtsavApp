@@ -36,7 +36,16 @@ class CdTimerState extends State<CdTimer> {
   final spacer = SizedBox(height: 5.0);
 
   final text1 = Text(
-    "COUNTDOWN TO",
+    "COUNTDOWN",
+    style: TextStyle(
+        fontSize: 35,
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+        fontFamily: "Thunderstrike"),
+  );
+
+  final text2 = Text(
+    "TO",
     style: TextStyle(
         fontSize: 35,
         color: Colors.white,
@@ -52,6 +61,7 @@ class CdTimerState extends State<CdTimer> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             text1,
+            text2,
             Text(
               "UTSAV",
               style: TextStyle(
