@@ -46,13 +46,8 @@ class AboutPage extends StatelessWidget {
                           fontSize: 30, color: Colors.greenAccent
                         )),
                     Text(
-<<<<<<< HEAD
                       "B.M.S College of Engineering , Bengaluru was establisjed in the uear 1946 by Late Sri. B.M. Sreenivasaiash, a great visionary and philanthropist and was nurtured by his illustrious son Late Sri. B.S Narayan. BMSCE is the first private sector initiative in engineering education in India. Started with only 3 Undergraduate and 16 PostGraduate courses,BMSCE today offer 13 undergraduate and 16 postgraduate courses both in conventional and emerging areas. 14 of its Departments are recognized as Reasearch Centres offering PhD/M.Sc(Engineering by research) degree in Science,Engineering, Architecture and Management. Modernisation and Exapnasionand sophistication have not changed the basic philosophy of education in BMSCE ",
                       style: new TextStyle(fontSize: 14, color: Colors.white),
-=======
-                      "B.M.S College of Engineering , Bengaluru was established in the year 1946 by Late Sri. B.M. Sreenivasaiash, a great visionary and philanthropist and was nurtured by his illustrious son Late Sri. B.S Narayan. BMSCE is the first private sector initiative in engineering education in India. Started with only 3 Undergraduate and 16 PostGraduate courses,BMSCE today offer 13 undergraduate and 16 postgraduate courses both in conventional and emerging areas. 14 of its Departments are recognized as Reasearch Centres offering PhD/M.Sc(Engineering by research) degree in Science,Engineering, Architecture and Management. Modernisation and Exapnasionand sophistication have not changed the basic philosophy of education in BMSCE ",
-                      style: new TextStyle(fontSize: 10, color: Colors.white),
->>>>>>> c26bc226d4c15c36e72a57046f3336f8e563dea8
                     ),
                     Text("Festival of Faith",
                         style: new TextStyle(
@@ -75,13 +70,8 @@ class AboutPage extends StatelessWidget {
                           fontSize: 30,color: Colors.greenAccent
                         )),
                     Text(
-<<<<<<< HEAD
                         "Collaboration with UTSAV 2020 will give you a unique oppurtunity to align your brand in th way yiu desire and will help you to appeal to a dynamic and receptive  spectrum of people. UTSAV drawn an enormous crowd of students every year. As we gear up and get the community hyped up for another phenmomenal UTSAV, we invite you to partner with us. We have had amazing support from a large number of sponsors ovr the years and with your contribution, we will make UTSAV 2020 another record breaker. Sponsors are what make this event possible and we offer you an excellent set of benefits.",
                         style: new TextStyle(fontSize: 14, color: Colors.white))
-=======
-                        "Collaboration with UTSAV 2020 will give you a unique oppurtunity to align your brand in the way you desire and will help you to appeal to a dynamic and receptive  spectrum of people. UTSAV drawn an enormous crowd of students every year. As we gear up and get the community hyped up for another phenmomenal UTSAV, we invite you to partner with us. We have had amazing support from a large number of sponsors over the years and with your contribution, we will make UTSAV 2020 another record breaker. Sponsors are what make this event possible and we offer you an excellent set of benefits.",
-                        style: new TextStyle(fontSize: 10, color: Colors.white))
->>>>>>> c26bc226d4c15c36e72a57046f3336f8e563dea8
                   ],
                 ),
               ),
