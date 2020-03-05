@@ -1,7 +1,7 @@
 Steps to Reproduce
 
-    $ git clone https://github.com/Chuckoo/UtsavApp.git
-    $ cd flutter_watch_shop/
+    $ git clone https://github.com/Chuckoo/UtsavApp.git UtsavApp
+    $ cd UtsavApp
     $ flutter packages get
     $ flutter run
 
