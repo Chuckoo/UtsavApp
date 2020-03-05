@@ -7,7 +7,7 @@ import 'custom_appbar.dart';
 
 class AboutPage extends StatelessWidget {
   final String title;
-
+//
   AboutPage(this.title);
 
   @override
