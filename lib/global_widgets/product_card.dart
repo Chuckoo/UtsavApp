@@ -10,7 +10,6 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final spacer = SizedBox(height: 5.0);
 
-   final image = Hero(tag: product.id, child: Image.asset(product.photos[0]));
 
     final name = Text(
       product.name.toUpperCase(),

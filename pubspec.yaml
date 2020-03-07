@@ -47,11 +47,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/logo.png
-   - assets/images/bg.jpg
+   - assets/images/bg.png
    - assets/images/watch20.png
-   - SVG/2x/bg.png
+   - assets/images/lbg.png
    - assets/images/vivek.jpg
    - assets/images/rahul.jpg
+   - assets/images/Vikram.png
    - assets/images/Abhishek.jpg
    - assets/images/HSGr.jpg
    - assets/images/Pratimas.jpg
@@ -60,7 +61,6 @@ flutter:
    - assets/images/Sameer.jpeg
    - assets/images/Sanjana.jpg
    - assets/images/Smriti.jpg
-   - assets/images/Vikram.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'dart:async';
-import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/home.dart';
 
 
@@ -29,12 +28,12 @@ class LandingPageState extends State<LandingPage>{
           Container(
             decoration: BoxDecoration(
               image: new DecorationImage(
-                image: AssetImage(AppImages.background),
+                image: AssetImage("assets/images/lbg.png"),
                 fit: BoxFit.cover,
               ),
             ),
             child: BackdropFilter(
-              filter: new ImageFilter.blur(sigmaX: 2.0,sigmaY: 3.0),
+              filter: new ImageFilter.blur(sigmaX: 1.0,sigmaY: 2.0),
               child: Container(
                 decoration: new BoxDecoration(
                     color: Colors.black.withOpacity(0.2)

@@ -9,14 +9,12 @@ class EventInfo{
   double start;
   double end;
   Color fillColor;
-  Color splashColor;
 
   EventInfo(N,S,E,fc){
     name=N;
     start=S;
     end=E;
     fillColor=fc;
-    splashColor=Colors.white;
   }
 }
 
@@ -35,25 +33,17 @@ class ScheduleState extends State<Schedule> {
   Color sepColor;
 
   Container eventCellGen (String name,double start,double end,Color fillColor,Color rippleColor){
-    Text txt = Text(name);
+    Text txt = Text(name,style: TextStyle(fontFamily: "Roboto"),);
     if(name == "Folk Dance"){
-      txt = Text(name,style: TextStyle(fontSize: 10),);
+      txt = Text(name,style: TextStyle(fontSize: 10,fontFamily: "Roboto"));
     }
     return Container(
-        margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
-        color: fillColor,
-        child: new Material(
-            color: Colors.transparent,
-            child:InkWell(
-                onTap: (){},
-                splashColor: rippleColor,
-                child:Container(
-                  height: 25,
-                  width: (end-start)*70.0,
-                  alignment: Alignment.center,
-                  child: txt,)
-            )
-        )
+      margin: EdgeInsets.fromLTRB(0, 2.5, 0, 2.5),
+      color: fillColor,
+      height: 25,
+      width: (end-start)*70.0,
+      alignment: Alignment.center,
+      child: txt,
     );
   }
 
@@ -74,7 +64,7 @@ class ScheduleState extends State<Schedule> {
         data[i].start,
         data[i].end,
         data[i].fillColor,
-        data[i].splashColor,
+        Colors.transparent,
       )
       );
       if(i<data.length-1 && data[i].end!=data[i+1].start){

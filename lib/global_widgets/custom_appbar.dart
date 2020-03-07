@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_watch_shop/utils/utils.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool isHome;
@@ -12,7 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
-      title: Image.asset(AppImages.logo, height: 70.0),
+      title: Image.asset("assets/images/logo.png", height: 70.0),
       centerTitle: true,
       actions: <Widget>[],
     );

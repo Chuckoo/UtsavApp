@@ -18,8 +18,7 @@ class DrawerMenuState extends State<DrawerMenu> {
         canvasColor: Colors.black54,
         splashColor: Colors.purpleAccent,
       ),
-      child: SingleChildScrollView(
-              child: Drawer(
+      child: Drawer(
           child: ListView(
             children: <Widget>[
               SizedBox(
@@ -108,7 +107,6 @@ class DrawerMenuState extends State<DrawerMenu> {
             ],
           ),
         ),
-      ),
     );
   }
 }

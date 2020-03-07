@@ -18,7 +18,7 @@ class AboutPage extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             image: new DecorationImage(
-              image: AssetImage("SVG/2x/bg.png"),
+              image: AssetImage("assets/images/bg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -96,7 +96,7 @@ class DevPage extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             image: new DecorationImage(
-              image: AssetImage("SVG/2x/bg.png"),
+              image: AssetImage("assets/images/bg.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -138,7 +138,7 @@ class DevPage extends StatelessWidget {
                           Text('(@the_heisenberks)',
                       style:
                           new TextStyle(fontSize: 30, color: Colors.white60)),
-                  Image.asset('assets/images/Vikram.jpg',
+                  Image.asset('assets/images/Vikram.png',
                       height: 200, width: 200, fit: BoxFit.fitWidth),
                   Text('Vikram K',
                       style:
@@ -166,7 +166,7 @@ class CorePage extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             image: new DecorationImage(
-              image: AssetImage("SVG/2x/bg.png"),
+              image: AssetImage("assets/images/bg.png"),
               fit: BoxFit.cover,
             ),
           ),

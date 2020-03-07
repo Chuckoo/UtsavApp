@@ -6,7 +6,6 @@ import 'package:flutter_watch_shop/global_widgets/timer.dart';
 import 'package:flutter_watch_shop/utils/utils.dart';
 import 'package:flutter_watch_shop/views/home/widgets/product_list.dart';
 import 'dart:ui';
-import 'dart:async';
 
 class HomePage extends StatefulWidget {
   @override
@@ -56,7 +55,7 @@ class _HomePageState extends State<HomePage>
           Container(
             decoration: BoxDecoration(
               image: new DecorationImage(
-                image: AssetImage("SVG/2x/bg.png"),
+                image: AssetImage("assets/images/bg.png"),
                 fit: BoxFit.cover,
               ),
             ),
